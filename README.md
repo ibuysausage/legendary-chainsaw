@@ -47,7 +47,8 @@ $ sudo apt install build-essential meson git cmake fzf ninja-build
 After building the binaries will be located in:</br>
 `source-dir/build/bin` for cmake</br>
 and `source-dir/build/src` for meson</br>
-You can install them with `make install` or `ninja install`
+You can install them with `make install` or `ninja install`</br>
+and uninstall with `make uninstall` or `ninja uninstall`
 
 1. Clone the github repository
 ```bash
