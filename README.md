@@ -39,8 +39,8 @@ $ sudo apt install build-essential git cmake fzf ninja-build
 ## Linux
 After building the binaries will be located in:</br>
 `source-dir/build/bin` for cmake</br>
-You can install them with `make install` or `ninja install`</br>
-and uninstall with `make uninstall` or `ninja uninstall`
+You can install them with `make install`</br>
+and uninstall with `make uninstall`
 
 1. Clone the github repository
 ```bash
@@ -63,7 +63,7 @@ The default build configuration is `Release`</br>
 ### Build using cmake
 ```bash
 $ mkdir build/ && cd build/
-$ make
+$ cmake ..
 ```
 
 ### Using docker
