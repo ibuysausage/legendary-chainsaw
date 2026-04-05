@@ -9,7 +9,7 @@ COPY . /hello
 
 WORKDIR /hello/build
 
-# RUN chmod a+x ../configure.sh && ../configure.sh
+# RUN chmod a+x ../setup.sh && ../setup.sh
 
 RUN cmake ..
 

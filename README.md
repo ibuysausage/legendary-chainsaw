@@ -55,7 +55,8 @@ $ cd legendary-chainsaw
 2. Actually build it
 
 First you must must select with programs to compile</br>
-Do that by running the configure script `./configure`</br>
+Do that by running the setup script `./setup`</br>
+You only need to do this with CMAKE</br>
 The default build configuration is `Release`</br>
 | Keys | Action |
 | ---- | ------ |
@@ -72,7 +73,7 @@ $ make
 
 ### Using docker
 > [!IMPORTANT]
-> As of now you still need to run the configuration file manually</br>
+> As of now you still need to run the setup script manually</br>
 > Or building the docker image WILL fail
 > Also make sure that `docker.sh` is executable
 
