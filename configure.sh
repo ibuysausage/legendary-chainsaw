@@ -21,6 +21,8 @@ echo "Select programs to include in the build"
 echo "TAB = toggle one | CTRL-A = toggle all | ENTER = confirm"
 echo
 
+sleep 1.5
+
 # Prepare the list for fzf
 DISPLAY_LIST=()
 for entry in "${EXECUTABLES[@]}"; do
