@@ -1,18 +1,13 @@
 # C++ projects
-This is where I host all of my c++ projects.<br>
+This is where I keep all of my c++ projects.<br>
 Feel free to check them out!
-
-### Legendary-Chainsaw
-You might see that the title is "legendary-chainsaw".<br>
-Github told me that short names are gud and suggested it.<br>
-I just wen't with it.<br>
 
 **TODO**
 - [x] Make config gen file
 - [x] Fix Dockerfile
 - [x] Remove cmake warning
 - [ ] Add more distros to dep list
-- [ ] Add docs for WIN and MacOS install
+- [ ] Add docs for Win and MacOS install
 - [ ] Expand calculator program
 
 
