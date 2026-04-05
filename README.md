@@ -11,7 +11,6 @@ I just wen't with it.<br>
 - [x] Make config gen file
 - [x] Fix Dockerfile
 - [x] Remove cmake warning
-- [x] Add support for meson
 - [ ] Add more distros to dep list
 - [ ] Add docs for WIN and MacOS install
 - [ ] Expand calculator program
@@ -27,17 +26,16 @@ I just wen't with it.<br>
 | fzf | tool for config |
 | git | cloning repo |
 | docker | run using docker |
-| meson | build system |
 | ninja | compile binaries |
 
 **Arch**
 ```bash
-$ sudo pacman -S base-devel meson docker git cmake make gcc fzf ninja
+$ sudo pacman -S base-devel docker git cmake make gcc fzf ninja
 ```
 
 **Debian/Ubuntu**
 ```bash
-$ sudo apt install build-essential meson git cmake fzf ninja-build
+$ sudo apt install build-essential git cmake fzf ninja-build
 ```
 **Make sure to install docker**
 
@@ -46,7 +44,6 @@ $ sudo apt install build-essential meson git cmake fzf ninja-build
 ## Linux
 After building the binaries will be located in:</br>
 `source-dir/build/bin` for cmake</br>
-and `source-dir/build/src` for meson</br>
 You can install them with `make install` or `ninja install`</br>
 and uninstall with `make uninstall` or `ninja uninstall`
 
@@ -71,14 +68,6 @@ The default build configuration is `Release`</br>
 ```bash
 $ mkdir build/ && cd build/
 $ make
-```
-
-### Build using meson
-
-```bash
-$ mdkir build/ && cd build/
-$ meson setup ..
-$ ninja
 ```
 
 ### Using docker

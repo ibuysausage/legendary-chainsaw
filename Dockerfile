@@ -3,7 +3,7 @@
 FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm && pacman -S \
-    base-devel cmake make meson fzf ninja gcc --noconfirm
+    base-devel cmake make fzf ninja gcc --noconfirm
 
 COPY . /hello
 
