@@ -45,4 +45,10 @@ if (BUILD_VAR)
 
 endif()
 
+if (BUILD_ONE_PIECE)
+    add_executable(onepiece src/one-piece/main.cpp)
+    install (TARGETS onepiece DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+
+endif()
+
 message("Build type used: " ${CMAKE_BUILD_TYPE})

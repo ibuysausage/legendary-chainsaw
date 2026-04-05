@@ -11,6 +11,7 @@ EXECUTABLES=(
   "Human To Dog Age|BUILD_DOG_AGE|Convert human years to dog years"
   "Addition|BUILD_ADD|Simple addition calculator"
   "Variable|BUILD_VAR|Print A uninitlized variable"
+  "One Piece Ep CALC|BUILD_ONE_PIECE|Calculate how much episodes you have left"
 )
 
 # --- 2. Initialization ---
