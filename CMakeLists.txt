@@ -2,7 +2,6 @@
 
 cmake_minimum_required(VERSION 4.2.3)
 
-include(${CMAKE_SOURCE_DIR}/config/config.cmake)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 set(CMAKE_INSTALL_PREFIX "/usr/local" CACHE PATH "install prefix" FORCE)
 set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
@@ -19,36 +18,25 @@ if(NOT TARGET uninstall)
     COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
 endif()
 
-if (BUILD_HELLO_WORLD)
-    set(HELLO_SOURCES src/hello-world/main.cpp src/hello-world/hi.cpp include/hi.h)
-    add_executable(hello ${HELLO_SOURCES})
-    target_include_directories(hello PRIVATE include)
-    install(TARGETS hello DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+set(HELLO_SOURCES src/hello-world/main.cpp src/hello-world/hi.cpp include/hi.h)
+add_executable(hello ${HELLO_SOURCES})
+target_include_directories(hello PRIVATE include)
+install(TARGETS hello DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
-endif()
 
-if (BUILD_DOG_AGE)
-    add_executable(dog src/dog-age/main.cpp)
-    install(TARGETS dog DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+add_executable(dog src/dog-age/main.cpp)
+install(TARGETS dog DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
-endif()
 
-if (BUILD_ADD)
-    add_executable(add src/addition/main.cpp)
-    install(TARGETS add DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+add_executable(add src/addition/main.cpp)
+install(TARGETS add DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
-endif()
 
-if (BUILD_VAR)
-    add_executable(var src/variable/main.cpp)
-    install(TARGETS var DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+add_executable(var src/variable/main.cpp)
+install(TARGETS var DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
-endif()
+add_executable(onepiece src/one-piece/main.cpp)
+install (TARGETS onepiece DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
-if (BUILD_ONE_PIECE)
-    add_executable(onepiece src/one-piece/main.cpp)
-    install (TARGETS onepiece DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
-
-endif()
 
 message("Build type used: " ${CMAKE_BUILD_TYPE})
