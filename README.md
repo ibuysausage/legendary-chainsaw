@@ -2,15 +2,6 @@
 This is where I keep all of my c++ projects.<br>
 Feel free to check them out!
 
-**TODO**
-- [x] Make config gen file
-- [x] Fix Dockerfile
-- [x] Remove cmake warning
-- [ ] Add more distros to dep list
-- [ ] Add docs for Win and MacOS install
-- [ ] Expand calculator program
-
-
 ### Dependencies
 
 | Dependency  | Usage in project |
@@ -25,14 +16,13 @@ Feel free to check them out!
 
 **Arch**
 ```bash
-$ sudo pacman -S base-devel docker git cmake make gcc fzf ninja
+$ sudo pacman -S base-devel git cmake make gcc ninja
 ```
 
 **Debian/Ubuntu**
 ```bash
-$ sudo apt install build-essential git cmake fzf ninja-build
+$ sudo apt install build-essential git cmake ninja-build
 ```
-**Make sure to install docker**
 
 # Building
 <small>Windows and Macos build instructions will be added soon</small> 
@@ -64,16 +54,4 @@ The default build configuration is `Release`</br>
 ```bash
 $ mkdir build/ && cd build/
 $ cmake ..
-```
-
-### Using docker
-> [!IMPORTANT]
-> As of now you still need to run the setup script manually</br>
-> Or building the docker image WILL fail
-> Also make sure that `docker.sh` is executable
-
-
-```bash
-$ docker build -t hello .
-$ docker run -it hello
 ```
