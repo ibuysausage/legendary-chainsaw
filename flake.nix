@@ -19,6 +19,12 @@
           ninja
           gcc
         ];
+
+	shellHook = '' 
+	    exec zsh
+	    exec cmake -B build/ -G Ninja
+	    exec cd build/ && ninja
+	'';
       };
     };
 
