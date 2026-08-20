@@ -8,3 +8,6 @@ meson.options
 
 # Random cache
 .cache
+
+# idk
+omp.json
